@@ -41,6 +41,16 @@
 </template>
 
 <script>
+// let current = 0;
+
+// console.log(document.links.length);
+
+// for (var i = 0; i < document.links.length; i++) {
+//     if (document.links[i].href === document.URL) {
+//         current = i;
+//     }
+// }
+// document.links[current].className = 'current';
 
 
 </script>
@@ -63,8 +73,7 @@ $medbase4: lighten($basecolor4, 10%);
 $lightbase4: lighten($basecolor4, 75%);
 
 $gradiant: rgb(176, 215, 233);
-$darkgrad: darken($gradiant, 50%);
-$satgrad: saturate($gradiant, 25%);
+
 
 // reset default settings
 * {
@@ -72,8 +81,9 @@ $satgrad: saturate($gradiant, 25%);
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  // font-size: .9rem;
 }
+
+
 
 body {
   background-image: url("./assets/celtic-knots2.jpg");

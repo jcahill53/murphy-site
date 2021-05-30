@@ -16,6 +16,23 @@
       sed risus ultricies tristique. Placerat orci nulla pellentesque dignissim
       enim. Sed libero enim sed faucibus turpis in eu mi.
     </p>
+
+    <div id="app">
+      <div class="application">
+        <!-- start of random image section -->
+        <div class="random">
+          <img v-bind:src="chosenImage" v-bind:alt="chosenDescr" />
+          <p>{{ chosenDescr }}</p>
+          <button @click="randomImage">See another image!</button>
+        </div>
+
+        <!-- <div>
+         <img src="../assets/image1.jpg" alt="celtic" /> 
+         <button>See a new image</button>
+        </div> -->
+
+      </div>
+    </div>
   </main>
 
   <SiteFooter />
@@ -24,6 +41,7 @@
 <script>
 // import footer component
 // @ is an alias to /src
+
 import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
@@ -32,7 +50,57 @@ export default {
     SiteFooter,
   },
 };
-</script>
+// select randon image
+    const CounterApp = {
+      name: "counter app",
+      data() {
+        return {
+          imageSrcRandom: [{
+              src: "../assets/image1.jpg",
+              descr: "Rich Murphy with his daughter Kate"
+            }, {
+              src: "../assets/image2.jpg",
+              descr: "Betsy shopping for plants at the garden center"
+            },
+            {
+              src: "../assets/image3.jpg",
+              descr: "Betsy Murphy at restaurant"
+            }, {
+              src: "../assets/image4.jpg",
+              descr: "Rosemary Murphy at dinner"
+            }, {
+              src: "../assets/image5.jpg",
+              descr: "The Cahill family"
+            }
+          ],
+ 
+          chosenImage: "../assets/image2.jpg",
+          chosenDescr: "Click the button to see a new image!",
+          memberName: "",
+          memberFather: "",
+          memberMother: "",
+          memberBirth: "",
+          memberDeath: "",
+          memberChildren: true,
+          memberImage: "",
+          memberFamily: "",
+          chosenPage: "",
+        }
+      },
+
+      methods: {
+        randomImage() {
+          var chosenNumber = Math.floor(Math.random() * this.imageSrcRandom.length);
+          this.chosenImage = this.imageSrcRandom[chosenNumber].src;
+          this.chosenDescr = this.imageSrcRandom[chosenNumber].descr;
+        },
+      }
+    }
+
+    Vue.createApp(CounterApp).mount('#app')
+
+  </script>
+
 
 <style lang="scss">
 // Variables for color pallet
