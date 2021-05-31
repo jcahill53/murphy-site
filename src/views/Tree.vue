@@ -1,36 +1,75 @@
 <template>
-  <main class="main tree">
-    <h1>This is a family tree page</h1>
+<main class="main-members">
+    <h2>Murphy Family Members</h2>
+    <div class="members">
+      <section class="parent">
+        <article>
+          <h3>John Edward Murphy</h3>
+          <p><span>born:</span>12/03/1917</p>
+          <p><span>died:</span>06/24/1972</p>
+        </article>
+        <article>
+          <h3>Elizabeth Mary Gaffney</h3>
+          <p><span>born:</span>08/12/1915</p>
+          <p><span>died:</span>08/24/1989</p>
+        </article>
+      </section>
+      <!-- end of parent section -->
+
+      <div class="connector"></div>
+
+      <section class="children">
+        <article>
+          <h3>Elizabeth Rose Murphy</h3>
+          <p><span>born:</span>06/20/1947</p>
+          <button>Children</button>
+        </article>
+        <article>
+          <h3>John Edward Murphy</h3>
+          <p><span>born:</span>05/25/1948</p>
+          <button>Children</button>
+        </article>
+        <article>
+          <h3>Rosemary Elaine Murphy</h3>
+          <p><span>born:</span>03/23/1950</p>
+          <button>Children</button>
+        </article>
+        <article>
+          <h3>Richard Joseph Murphy</h3>
+          <p><span>born:</span>08/22/1951</p>
+          <button>Children</button>
+        </article>
+        <article>
+          <h3>Joann Mary Murphy Cahill</h3>
+          <p><span>born:</span>06/06/1953</p>
+          <button onclick="document.location='members-joann.html'">Children</button>
+        </article>
+        <article>
+          <h3>Henry Christopher Murphy</h3>
+          <p><span>born:</span>12/14/1958</p>
+          <button>Children</button>
+        </article>
+        <article>
+          <h3>James Francis Murphy</h3>
+          <p><span>born:</span>05/04/1961</p>
+          <button>Children</button>
+        </article>
+
+      </section>
+      <!-- end of child section-->
+    </div> <!-- end of members div -->
+
   </main>
+
+<!-- <SiteFooter/> -->
+
+
 </template>
 
+<script>
+
+</script>
+
 <style lang="scss">
-// Variables for color pallet
-$basecolor: rgb(68, 126, 68);
-$lightbasecolor: lighten($basecolor, 50%);
-$medbase: lighten($basecolor, 20%);
 
-$basecolor2: white;
-
-$basecolor3: rgb(112, 110, 110);
-$lightbasecolor3: lighten($basecolor3, 50%);
-$medbasecolor3: lighten($basecolor3, 30%);
-$darkgray: darken($basecolor3, 50%);
-
-$basecolor4: rgba(221, 48, 48, 0.836);
-$medbase4: lighten($basecolor4, 10%);
-$lightbase4: lighten($basecolor4, 75%);
-
-$gradiant: rgb(176, 215, 233);
-$darkgrad: darken($gradiant, 50%);
-$satgrad: saturate($gradiant, 25%);
-
-// reset default settings
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-  // font-size: .9rem;
-}
 </style>

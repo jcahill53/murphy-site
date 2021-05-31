@@ -31,126 +31,220 @@
          <button>See a new image</button>
         </div> -->
 
+        <!-- start of family member section -->
+        <h2>Family Members</h2>
+
+        <div class="family">
+          <article
+            v-for="(member, index) in members"
+            :key="member.memberID"
+            class="familyMember"
+          >
+            <img
+              v-bind:src="member.memberImage"
+              v-bind:alt="member.memberName"
+            />
+            <div>
+              <h4>{{ member.memberName }}</h4>
+              <p><span>born: </span>{{ member.memberBirth }}</p>
+              <div class="date-of-death">
+                <p v-if="member.memberDeath">
+                  <span>death: </span>{{ member.memberDeath }}
+                </p>
+              </div>
+              <!-- <a v-if="member.memberChildren" v-bind:href="member.memberFamily">Children</a> -->
+              <div class="member-children">
+                <a v-if="member.memberChildren" v-bind:href="memberTree(index)"
+                  >Children</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+      <!-- end of family members div -->
     </div>
+    <!-- end of app div -->
   </main>
 
-  <SiteFooter />
+  <!-- <SiteFooter /> -->
 </template>
 
 <script>
-// import footer component
-// @ is an alias to /src
+const CounterApp = {
+  name: "counter app",
+  data() {
+    return {
+      imageSrcRandom: [
+        {
+          src: "../assets/image1.jpg",
+          descr: "Rich Murphy with his daughter Kate",
+        },
+        {
+          src: "../assets/image2.jpg",
+          descr: "Betsy shopping for plants at the garden center",
+        },
+        {
+          src: "../assets/image3.jpg",
+          descr: "Betsy Murphy at restaurant",
+        },
+        {
+          src: "../assets/image4.jpg",
+          descr: "Rosemary Murphy at dinner",
+        },
+        {
+          src: "../assets/image5.jpg",
+          descr: "The Cahill family",
+        },
+      ],
+      members: [
+        {
+          memberID: "001",
+          memberName: "John Edward Murphy",
+          memberFather: "James Francis Murphy",
+          memberMother: "Rose Walsh Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "01/01/1900",
+          memberChildren: true,
+          memberImage: "../assets/image2.jpg",
+          memberFamily: "./members.html",
+        },
+        {
+          memberID: "002",
+          memberName: "Elizabeth Mary Gaffney Murphy",
+          memberFather: "Henry Christopher Gaffney",
+          memberMother: "Elizabeth Barkley Gaffney",
+          memberBirth: "01/01/1900",
+          memberDeath: "01/01/1900",
+          memberChildren: true,
+          memberImage: "../assets/image1.jpg",
+          memberFamily: "./members.html",
+        },
 
-import SiteFooter from "@/components/SiteFooter.vue";
-
-export default {
-  name: "Blog",
-  components: {
-    SiteFooter,
-  },
-};
-// select randon image
-    const CounterApp = {
-      name: "counter app",
-      data() {
-        return {
-          imageSrcRandom: [{
-              src: "../assets/image1.jpg",
-              descr: "Rich Murphy with his daughter Kate"
-            }, {
-              src: "../assets/image2.jpg",
-              descr: "Betsy shopping for plants at the garden center"
-            },
-            {
-              src: "../assets/image3.jpg",
-              descr: "Betsy Murphy at restaurant"
-            }, {
-              src: "../assets/image4.jpg",
-              descr: "Rosemary Murphy at dinner"
-            }, {
-              src: "../assets/image5.jpg",
-              descr: "The Cahill family"
-            }
-          ],
- 
-          chosenImage: "../assets/image2.jpg",
-          chosenDescr: "Click the button to see a new image!",
-          memberName: "",
-          memberFather: "",
-          memberMother: "",
-          memberBirth: "",
+        {
+          memberID: "003",
+          memberName: "Elizabeth Rose Murphy",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "",
+          memberChildren: false,
+          memberImage: "../assets/image2.jpg",
+          memberFamily: "",
+        },
+        {
+          memberID: "004",
+          memberName: "John Edward Murphy",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: "",
-          memberFamily: "",
-          chosenPage: "",
-        }
-      },
-
-      methods: {
-        randomImage() {
-          var chosenNumber = Math.floor(Math.random() * this.imageSrcRandom.length);
-          this.chosenImage = this.imageSrcRandom[chosenNumber].src;
-          this.chosenDescr = this.imageSrcRandom[chosenNumber].descr;
+          memberImage: "../assets/image1.jpg",
+          memberFamily: "./members.html",
         },
-      }
-    }
+        {
+          memberID: "005",
+          memberName: "Rosemary Elaine Murphy",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "",
+          memberChildren: false,
+          memberImage: "../assets/image4.jpg",
+          memberFamily: "./members.html",
+        },
+        {
+          memberID: "006",
+          memberName: "Richard Joseph Murphy",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "",
+          memberChildren: true,
+          memberImage: "../assets/image4.jpg",
+          memberFamily: "./members.html",
+        },
+        {
+          memberID: "007",
+          memberName: "Joann Mary Murphy Cahill",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "",
+          memberChildren: true,
+          memberImage: "../assets/image4.jpg",
+          memberFamily: "./members-joann.html",
+        },
+        {
+          memberID: "008",
+          memberName: "Henry Christopher Murphy",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "",
+          memberChildren: true,
+          memberImage: "../assets/image1.jpg",
+          memberFamily: "./members.html",
+        },
+        {
+          memberID: "009",
+          memberName: "James Francis Murphy",
+          memberFather: "John Edward Murphy",
+          memberMother: "Elizabeth Mary Murphy",
+          memberBirth: "01/01/1900",
+          memberDeath: "",
+          memberChildren: false,
+          memberImage: "../assetss/image1.jpg",
+          memberFamily: "./members.html",
+        },
+      ],
+      chosenImage: "../assets/image2.jpg",
+      chosenDescr: "Click the button to see a new image!",
+      memberName: "",
+      memberFather: "",
+      memberMother: "",
+      memberBirth: "",
+      memberDeath: "",
+      memberChildren: true,
+      memberImage: "",
+      memberFamily: "",
+      chosenPage: "",
+    };
+  },
 
-    Vue.createApp(CounterApp).mount('#app')
+  methods: {
+    randomImage() {
+      var chosenNumber = Math.floor(Math.random() * this.imageSrcRandom.length);
+      this.chosenImage = this.imageSrcRandom[chosenNumber].src;
+      this.chosenDescr = this.imageSrcRandom[chosenNumber].descr;
+    },
+    memberTree(index) {
+      console.log(index);
+      return this.members[index].memberFamily;
+    },
 
-  </script>
+    sortedArray() {
+      let sortedMembers = this.members.memberName;
 
+      sortedMembers = sortedMembers.sort((a, b) => {
+        let fa = a.memberName.toLowerCase(),
+          fb = b.memberName.toLowerCase();
+        if (fa < fb) {
+          return -1;
+        }
+        if (fa > fb) {
+          return 1;
+        }
+        return 0;
+      });
+    },
+  },
+};
+
+// Vue.createApp(CounterApp).mount('#app')
+</script>
 
 <style lang="scss">
-// Variables for color pallet
-$basecolor: rgb(68, 126, 68);
-$lightbasecolor: lighten($basecolor, 50%);
-$medbase: lighten($basecolor, 20%);
-
-$basecolor2: white;
-
-$basecolor3: rgb(112, 110, 110);
-$lightbasecolor3: lighten($basecolor3, 50%);
-$medbasecolor3: lighten($basecolor3, 30%);
-$darkgray: darken($basecolor3, 50%);
-
-$basecolor4: rgba(221, 48, 48, 0.836);
-$medbase4: lighten($basecolor4, 10%);
-$lightbase4: lighten($basecolor4, 75%);
-
-$gradiant: rgb(176, 215, 233);
-$darkgrad: darken($gradiant, 50%);
-$satgrad: saturate($gradiant, 25%);
-
-// reset default settings
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-  // font-size: .9rem;
-}
-
-main {
-  width: 95%;
-  background-color: $lightbasecolor3;
-  margin: 0 auto;
-  min-height: 50rem;
-  padding-bottom: 5rem;
-  .welcome {
-    color: rgba(221, 48, 48, 0.836);
-    text-align: center;
-    padding-top: 2rem;
-    font-size: 2.5rem;
-  }
-  .intro {
-    font-size: 1em;
-    text-align: center;
-    color: basecolor2;
-    margin: 3% 5%;
-  }
-
-  // end of intro
-}
 </style>
+
