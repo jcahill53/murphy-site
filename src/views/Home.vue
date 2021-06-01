@@ -17,19 +17,14 @@
       enim. Sed libero enim sed faucibus turpis in eu mi.
     </p>
 
-    <div id="app">
+    <div>
       <div class="application">
         <!-- start of random image section -->
         <div class="random">
-          <img v-bind:src="chosenImage" v-bind:alt="chosenDescr" />
+          <img :src="chosenImage" :alt="chosenDescr" />
           <p>{{ chosenDescr }}</p>
           <button @click="randomImage">See another image!</button>
         </div>
-
-        <!-- <div>
-         <img src="../assets/image1.jpg" alt="celtic" /> 
-         <button>See a new image</button>
-        </div> -->
 
         <!-- start of family member section -->
         <h2>Family Members</h2>
@@ -53,10 +48,12 @@
                 </p>
               </div>
               <!-- <a v-if="member.memberChildren" v-bind:href="member.memberFamily">Children</a> -->
-              <div class="member-children">
-                <a v-if="member.memberChildren" v-bind:href="memberTree(index)"
-                  >Children</a
-                >
+              <div class="member-children leave-space">
+                <button  v-if="member.memberChildren" >
+                  <router-link  v-bind:to="memberTree(index)"
+                    >Children</router-link
+                  >
+                </button>
               </div>
             </div>
           </article>
@@ -70,30 +67,30 @@
   <!-- <SiteFooter /> -->
 </template>
 
-<script>
-const CounterApp = {
+<script type="text/javascript">
+export default {
   name: "counter app",
   data() {
     return {
       imageSrcRandom: [
         {
-          src: "../assets/image1.jpg",
+          src: require("../assets/image1.jpg"),
           descr: "Rich Murphy with his daughter Kate",
         },
         {
-          src: "../assets/image2.jpg",
+          src: require("../assets/image2.jpg"),
           descr: "Betsy shopping for plants at the garden center",
         },
         {
-          src: "../assets/image3.jpg",
+          src: require("../assets/image3.jpg"),
           descr: "Betsy Murphy at restaurant",
         },
         {
-          src: "../assets/image4.jpg",
+          src: require("../assets/image4.jpg"),
           descr: "Rosemary Murphy at dinner",
         },
         {
-          src: "../assets/image5.jpg",
+          src: require("../assets/image5.jpg"),
           descr: "The Cahill family",
         },
       ],
@@ -106,8 +103,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "01/01/1900",
           memberChildren: true,
-          memberImage: "../assets/image2.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image2.jpg"),
+          memberFamily: "/tree",
         },
         {
           memberID: "002",
@@ -117,8 +114,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "01/01/1900",
           memberChildren: true,
-          memberImage: "../assets/image1.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image1.jpg"),
+          memberFamily: "/tree",
         },
 
         {
@@ -129,8 +126,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: false,
-          memberImage: "../assets/image2.jpg",
-          memberFamily: "",
+          memberImage: require("../assets/image2.jpg"),
+          memberFamily: "/tree",
         },
         {
           memberID: "004",
@@ -140,8 +137,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: "../assets/image1.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image1.jpg"),
+          memberFamily: "/murphje",
         },
         {
           memberID: "005",
@@ -151,8 +148,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: false,
-          memberImage: "../assets/image4.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image4.jpg"),
+          memberFamily: "/tree",
         },
         {
           memberID: "006",
@@ -162,8 +159,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: "../assets/image4.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image4.jpg"),
+          memberFamily: "/murphrj",
         },
         {
           memberID: "007",
@@ -173,8 +170,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: "../assets/image4.jpg",
-          memberFamily: "./members-joann.html",
+          memberImage: require("../assets/image4.jpg"),
+          memberFamily: "/cahilljm",
         },
         {
           memberID: "008",
@@ -184,8 +181,8 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: "../assets/image1.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image1.jpg"),
+          memberFamily: "/murphhc",
         },
         {
           memberID: "009",
@@ -195,11 +192,11 @@ const CounterApp = {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: false,
-          memberImage: "../assetss/image1.jpg",
-          memberFamily: "./members.html",
+          memberImage: require("../assets/image1.jpg"),
+          memberFamily: "/tree",
         },
       ],
-      chosenImage: "../assets/image2.jpg",
+      chosenImage: require("../assets/image3.jpg"),
       chosenDescr: "Click the button to see a new image!",
       memberName: "",
       memberFather: "",
@@ -211,7 +208,9 @@ const CounterApp = {
       memberFamily: "",
       chosenPage: "",
     };
+    // end of return
   },
+  // end of data() section
 
   methods: {
     randomImage() {
@@ -220,29 +219,13 @@ const CounterApp = {
       this.chosenDescr = this.imageSrcRandom[chosenNumber].descr;
     },
     memberTree(index) {
-      console.log(index);
+      // console.log(index);
       return this.members[index].memberFamily;
     },
-
-    sortedArray() {
-      let sortedMembers = this.members.memberName;
-
-      sortedMembers = sortedMembers.sort((a, b) => {
-        let fa = a.memberName.toLowerCase(),
-          fb = b.memberName.toLowerCase();
-        if (fa < fb) {
-          return -1;
-        }
-        if (fa > fb) {
-          return 1;
-        }
-        return 0;
-      });
-    },
   },
+  // end of methods
 };
-
-// Vue.createApp(CounterApp).mount('#app')
+// end of export default
 </script>
 
 <style lang="scss">

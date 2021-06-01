@@ -16,7 +16,7 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import( /* webpackChunkName: "about" */ '../views/Tree.vue')
+      return import( /* webpackChunkName: "tree" */ '../views/Tree.vue')
     }
   },
   {
@@ -26,7 +26,7 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import( /* webpackChunkName: "about" */ '../views/Blog.vue')
+      return import( /* webpackChunkName: "blog" */ '../views/Blog.vue')
     }
   },
   {
@@ -36,9 +36,90 @@ const routes = [{
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import( /* webpackChunkName: "about" */ '../views/Fun-facts.vue')
+      return import( /* webpackChunkName: "fun-facts" */ '../views/Fun-facts.vue')
     }
   },
+  {
+    path: '/murphrj',
+    name: 'Murphrj',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyrj" */ '../views/subvues/Murphrj.vue')
+    }
+  },
+  {
+    path: '/cahilljm',
+    name: 'Cahilljm',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyrj" */ '../views/subvues/Cahilljm.vue')
+    }
+  },
+  {
+    path: '/murphje2',
+    name: 'Murphje2',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyje2" */ '../views/subvues/Murphje2.vue')
+    }
+  },
+  {
+    path: '/cahillkw',
+    name: 'Cahillkw',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Cahillkw" */ '../views/subvues/Cahillkw.vue')
+    }
+  },
+  {
+    path: '/murphje',
+    name: 'Murphje',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyrj" */ '../views/subvues/Murphje.vue')
+    }
+  },
+  {
+    path: '/murphhc',
+    name: 'Murphhc',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyrj" */ '../views/subvues/Murphhc.vue')
+    }
+  },
+  {
+    path: '/murphje2',
+    name: 'Murphje2',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyje2" */ '../views/subvues/Murphje2.vue')
+    }
+  },
+  {
+    path: '/hubinaje',
+    name: 'Hubinaje',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "Murphyje2" */ '../views/subvues/Hubinaje.vue')
+    }
+  },
+
 
 ]
 
