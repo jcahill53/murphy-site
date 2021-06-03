@@ -10,7 +10,7 @@
           <p><span>died:</span>01/01/1900</p>
         </article>
         <article>
-          <h3>Elizabeth Mary Gaffney</h3>
+          <h3>Elizabeth Mary Murphy</h3>
           <p><span>born:</span>01/01/1900</p>
           <p><span>died:</span>01/01/1900</p>
         </article>
