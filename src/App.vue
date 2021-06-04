@@ -21,6 +21,9 @@
       <li class="list">
         <router-link class="list-item" to="/fun-facts">Fun-Facts</router-link>
       </li>
+      <li class="list">
+        <router-link class="list-item" to="/api">API sample</router-link>
+      </li>
     </ul>
   </nav>
 
@@ -283,6 +286,7 @@ body {
           .button {
             padding: 0.5rem;
             margin-top: 1rem;
+             margin-bottom: 1rem;
             background-color: $basecolor;
             color: $lightbasecolor3;
             text-decoration: none;
