@@ -12,10 +12,6 @@ export default {
   data() {
     return {
       list: [],
-      userId: "",
-      id: "",
-      title: "",
-      body:"",
     };
   },
   methods: {
@@ -29,20 +25,21 @@ export default {
             throw new Error("Request failed with");
           }
         })
+        // end of .then(response) statement
+
         .then((json) => {
-          // console.log(json);
+          console.log(json);
           this.list = json;
-          json.forEach(function (el, index) {
-            if (index < 100) {
-              console.log(el.userId)
-              console.log(el.id)
-              console.log(el.title);
-              console.log(el.body);
-            }
-          });
         })
+
+        // end of .then(json) statement
+
         .catch((err) => console.log("ERROR", err));
     },
+    // end of getData
   },
+  // end of methods
 };
+// end of export default
 </script>
+
