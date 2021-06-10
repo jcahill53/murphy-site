@@ -3,7 +3,7 @@
     <div class="home">
       <button @click="getData">Click the button for results</button>
       <article
-        v-for="(brewery ) in breweries"
+        v-for="(brewery) in breweries"
         :key="brewery.name"
         class="brewery"
       >
@@ -25,9 +25,14 @@
         <p>
           <span>Phone: {{ brewery.phone }}</span>
         </p>
+
+         <p>
+          <span>URL: {{ brewery.phone }}</span>
+        </p>    
         <p>
           <span>URL: {{ brewery.website_url }}</span>
         </p>
+
       </article>
     </div>
   </main>

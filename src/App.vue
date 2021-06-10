@@ -24,6 +24,12 @@
       <li class="list">
         <router-link class="list-item" to="/api">API sample</router-link>
       </li>
+       <!-- <li class="list">
+        <router-link class="list-item" to="/api-google">API Calendar</router-link>
+      </li>
+       <li class="list">
+        <router-link class="list-item" to="/api-hp">API hp sample</router-link>
+      </li> -->
     </ul>
   </nav>
 

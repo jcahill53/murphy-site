@@ -50,6 +50,26 @@ const routes = [{
     }
   },
   {
+    path: '/api-google',
+    name: 'API-google',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "fun-facts" */ '../views/API-google.vue')
+    }
+  },
+  {
+    path: '/api-hp',
+    name: 'API-hp',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: function () {
+      return import( /* webpackChunkName: "fun-facts" */ '../views/API-hp.vue')
+    }
+  },
+  {
     path: '/murphrj',
     name: 'Murphrj',
     // route level code-splitting

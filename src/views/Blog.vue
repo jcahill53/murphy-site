@@ -3,7 +3,16 @@
     <aside class="events">
       <h3>Upcoming Events</h3>
       <div class="event-container">
-        <!-- index.js will insert events here -->
+        <article
+          v-for="event in events"
+          :key="event.description"
+          class="familyMember"
+        >
+          <h4>{{event.description}}</h4>
+          <p><span>Date: </span>{{event.startdate}}</p>
+          <p><span>Start: </span>{{event.start}} {{event.starttimeZone}}</p>
+          <p><span>End: </span>{{event.end}} {{event.endtimeZone}}</p>
+        </article>
       </div>
     </aside>
 
@@ -114,90 +123,88 @@
   <!-- <SiteFooter/> -->
 </template>
 
-// <script>
-// export default {
-//   name: "counter app",
-//   data() {
-//     return {
-// // Array of family events
-// events = [{
-//     "description": "John's Birthday",
-//     "enddate": "5/15/21",
-//     "end": "11:59pm",
-//     "endtimeZone": "EST",
-//     "startdate": "5/15/21",
-//     "start": "12:00am",
-//     "starttimeZone": "EST",
-// }, 
-// {
-//     "description": "Tim's Birthday",
-//     "end.date": "5/23/21",
-//     "end": "11:59pm",
-//     "endtimeZone": "EST",
-//     "startdate": "6/20/21",
-//     "start": "12:00am",
-//     "starttimeZone": "EST",
-// },
-// {
-//     "description": "Betsy's Birthday",
-//     "enddate": "6/23/21",
-//     "end": "11:59pm",
-//     "endtimeZone": "EST",
-//     "startdate": "6/25/21",
-//     "start": "12:00am",
-//     "starttimeZone": "EST",
-// }, 
-// {
-//     "description": "Family Reunion",
-//     "enddate": "7/05/21",
-//     "end": "9:00pm",
-//     "endtimeZone": "EST",
-//     "startdate": "7/05/21",
-//     "start": "2:00pm",
-//     "starttimeZone": "EST",
-// },
-// {
-//     "description": "Owen's Birthday",
-//     "enddate": "7/20/21",
-//     "end": "11:59pm",
-//     "endtimeZone": "EST",
-//     "startdate": "7/20/21",
-//     "start": "12:00am",
-//     "starttimeZone": "EST",
-// }, 
-// {
-//     "description": "Mom and Dad's Anniversay",
-//     "enddate": "7/24/21",
-//     "end": "11:59pm",
-//     "endtimeZone": "EST",
-//     "startdate": "7/24/21",
-//     "start": "12:00am",
-//     "starttimeZone": "EST",
-// }, 
-// ]
-//     };
-//     // end of return
-//   },
-//   // end of data() section
-// // Autogenerate HTML in index.html based on objects in the array
-// eventsHTML = events.map(function (el) {
 
-// let event = `<article>
-// <h4>${el.description}</h4>
-// <p><span>Date:  </span>${el.startdate}</p>
-// <p><span>Start:  </span>${el.start} ${el.starttimeZone}</p>
-// <p><span>End: </span>${el.end}  ${el.endtimeZone}</p>
-// </article>`;
+<script type="text/javascript">
+export default {
+  name: "event app",
+  data() {
+    return { 
+     events:[{
+        "description": "John's Birthday",
+        "enddate": "5/15/21",
+        "end": "11:59pm",
+        "endtimeZone": "EST",
+        "startdate": "5/15/21",
+        "start": "12:00am",
+        "starttimeZone": "EST",
+        }, 
+        {
+        "description": "Tim's Birthday",
+        "end.date": "5/23/21",
+        "end": "11:59pm",
+        "endtimeZone": "EST",
+        "startdate": "6/20/21",
+        "start": "12:00am",
+        "starttimeZone": "EST",
+        },
+        {
+        "description": "Betsy's Birthday",
+        "enddate": "6/23/21",
+        "end": "11:59pm",
+        "endtimeZone": "EST",
+        "startdate": "6/25/21",
+        "start": "12:00am",
+        "starttimeZone": "EST",
+        }, 
+        {
+        "description": "Family Reunion",
+        "enddate": "7/05/21",
+        "end": "9:00pm",
+        "endtimeZone": "EST",
+        "startdate": "7/05/21",
+        "start": "2:00pm",
+        "starttimeZone": "EST",
+        },
+        {
+        "description": "Owen's Birthday",
+        "enddate": "7/20/21",
+        "end": "11:59pm",
+        "endtimeZone": "EST",
+        "startdate": "7/20/21",
+        "start": "12:00am",
+        "starttimeZone": "EST",
+        }, 
+        {
+        "description": "Mom and Dad's Anniversay",
+        "enddate": "7/24/21",
+        "end": "11:59pm",
+        "endtimeZone": "EST",
+        "startdate": "7/24/21",
+        "start": "12:00am",
+        "starttimeZone": "EST",
+        }, 
+      ],
+        description: " ",
+        enddate: " ",
+        end: " ",
+        endtimeZone: " ",
+        startdate: " ",
+        start: " ",
+        starttimeZone: " ",
+    };
+    // end of return
+  },
+  // end of data() section
 
-// return event;})
-// };
+  methods: {
+  
+  },
+  // end of methods
+};
+// end of export default
+</script>
 
 
-
-
-
-// document.querySelector('div.event-container').innerHTML = eventsHTML;
-// </script>
 
 <style lang="scss">
 </style>
