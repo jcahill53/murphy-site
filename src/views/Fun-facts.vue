@@ -39,13 +39,13 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <div class="row">
-                <img class="leinster col mw-50" src="../assets/irish-map-sm.jpg"
+                <img class="leinster col mw-50" src="@/assets/irish-map-sm.jpg"
                   alt="Map of Ireland showing Leinster in the southeastern corner of the country">
                 <p class="col">The surname Murphy was first found in County Wexford (Irish: Loch Garman), founded
                   by Vikings as Waesfjord, and located in Southeastern Ireland, in the province of Leinster, where they
                   held
                   a family seat from very early times. </p>
-                <img class="wexford col mw-50" src="../assets/wexford-map-sm.jpg"
+                <img class="wexford col mw-50" src="@/assets/wexford-map-sm.jpg"
                   alt="Map of Ireland showing Wexford County along the southeastern shorline of Ireland">
               </div>
             </div> <!--  end of accordian body -->
@@ -63,7 +63,7 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body row ">
-              <img class="tartan col" src="../assets/Murphy-Tartan-sm.jpg"
+              <img class="tartan col" src="@/assets/Murphy-Tartan-sm.jpg"
                 alt="Murphy Tartan Plaid Primarily green with red, black, yellow and white pattern">
               <p class="col">This tartan is a colour modification of MacLean of Duart. Believed for many years to have
                 been recorded

@@ -275,10 +275,10 @@ body {
         }
 
         .date-of-death {
-          min-height: 1.5rem;
+          min-height: 1rem;
         }
 
-        .member-children {
+        .member-children, .children {
           min-height: 2rem;
           display: block;
           margin: 0.5rem auto 1rem auto;
@@ -292,7 +292,7 @@ body {
           .button {
             padding: 0.5rem;
             margin-top: 1rem;
-             margin-bottom: 1rem;
+            margin-bottom: 2rem;
             background-color: $basecolor;
             color: $lightbasecolor3;
             text-decoration: none;
@@ -451,7 +451,10 @@ body {
         }
 
         p {
-          padding: 0.25rem;
+        
+          padding-bottom: 0rem .25rem;
+         
+
         }
 
         h3 {
@@ -473,10 +476,11 @@ body {
     button,
     .button {
       padding: 0.5rem;
-      margin-top: 1rem;
+      // margin-top: 1rem;
       background-color: $basecolor;
       color: $lightbasecolor3;
       text-decoration: none;
+      margin-bottom: 1rem;
     }
 
     .no-children {
@@ -484,7 +488,7 @@ body {
     }
 
     .leave-space {
-      min-height: 3rem;
+      min-height: 4rem;
     }
   }
 

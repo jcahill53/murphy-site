@@ -22,7 +22,7 @@
         <article class="blog-flex-container">
           <img
             class="blog-img"
-            src="../assets/Murphy_Coat_of_Arms2.jpg"
+            src="@/assets/Murphy_Coat_of_Arms2.jpg"
             alt="Murphy Coat of Arms"
           />
           <section class="blog-txt">
@@ -63,7 +63,7 @@
         <article class="blog-flex-container">
           <img
             class="blog-img"
-            src="../assets/image2.jpg"
+            src="@/assets/image2.jpg"
             alt="Murphy Coat of Arms"
           />
           <section class="blog-txt">
@@ -92,7 +92,7 @@
         <article class="blog-flex-container">
           <img
             class="blog-img"
-            src="../assets/image2.jpg"
+            src="@/assets/image2.jpg"
             alt="Murphy Coat of Arms"
           />
           <section class="blog-txt">
