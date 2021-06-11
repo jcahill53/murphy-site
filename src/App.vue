@@ -24,7 +24,7 @@
       <li class="list">
         <router-link class="list-item" to="/api">API sample</router-link>
       </li>
-       <!-- <li class="list">
+      <!-- <li class="list">
         <router-link class="list-item" to="/api-google">API Calendar</router-link>
       </li>
        <li class="list">
@@ -51,12 +51,6 @@
 @import "./styles/_settings-responsive2";
 
 // reset default settings
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
 
 // reset default settings
 * {
@@ -198,7 +192,8 @@ body {
   main {
     width: 95%;
     background-color: $lightbasecolor3;
-    margin: 0 auto;
+    margin: 1rem auto;
+    
     min-height: 50rem;
     padding-bottom: 5rem;
 
@@ -278,7 +273,8 @@ body {
           min-height: 1rem;
         }
 
-        .member-children, .children {
+        .member-children,
+        .children {
           min-height: 2rem;
           display: block;
           margin: 0.5rem auto 1rem auto;
@@ -286,7 +282,7 @@ body {
           a {
             text-decoration: none;
             color: $lightbase4;
-          }   
+          }
 
           button,
           .button {
@@ -399,67 +395,64 @@ body {
       flex-wrap: wrap;
       width: 95%;
       font-size: 1rem;
+    }
+
+    .family1,
+    .family2 {
+      .parent {
+        // margin: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 3px solid $darkgray;
+        padding: 1rem 1rem;
+        margin: 2rem 5rem 0rem 5rem;
+        background-color: lightgray;
       }
 
-      .family1,
-      .family2 {
-        .parent {
-          // margin: 5rem;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          flex-wrap: wrap;
-          border: 3px solid $darkgray;
-          padding: 1rem 1rem;
-          margin: 2rem 5rem 0rem 5rem;
-          background-color: lightgray;
-        }
+      .connector {
+        width: 3px;
+        height: 3rem;
+        border: 3px dotted $darkgray;
+        margin: auto;
+      }
 
-        .connector {
-          width: 3px;
-          height: 3rem;
-          border: 3px dotted $darkgray;
-          margin: auto;
-        }
+      .children {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem 1rem;
+        margin: 0rem 2rem;
+        border: 3px solid $darkgray;
+        background-color: $medbase;
+      }
 
-        .children {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          flex-wrap: wrap;
-          padding: 1rem 1rem;
-          margin: 0rem 2rem;
-          border: 3px solid $darkgray;
-          background-color: $medbase;
-        }
+      article {
+        border: 3px solid $basecolor4;
+        border-radius: 20px;
+        min-height: 10rem;
+        min-width: 20rem;
+        text-align: center;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $lightbasecolor3;
+      }
 
-        article {
-          border: 3px solid $basecolor4;
-          border-radius: 20px;
-          min-height: 10rem;
-          min-width: 20rem;
-          text-align: center;
-          margin: 1rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          background-color: $lightbasecolor3;
-        }
+      p {
+        padding-bottom: 0rem 0.25rem;
+      }
 
-        p {
-        
-          padding-bottom: 0rem .25rem;
-         
-
-        }
-
-        h3 {
-          padding: 0.5rem;
-        }
+      h3 {
+        padding: 0.5rem;
+      }
       // end of family1 and family2
 
       .family2 {
@@ -469,7 +462,6 @@ body {
         }
       }
       // end of family2
-
     }
     // end of members
 
@@ -484,7 +476,7 @@ body {
     }
 
     .no-children {
-      display:none;
+      display: none;
     }
 
     .leave-space {

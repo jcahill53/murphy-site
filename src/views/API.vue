@@ -1,35 +1,50 @@
 <template>
   <main>
-    <div class="home">
-      <button @click="getData">Click the button for results</button>
-      <article
-        v-for="(brewery ) in breweries"
-        :key="brewery.name"
-        class="brewery"
-      >
-        <p>
-          <span>Name: {{ brewery.name }}</span>
-        </p>
-        <p>
-          <span>City: {{ brewery.city }}</span>
-        </p>
-        <p>
-          <span>State: {{ brewery.state }}</span>
-        </p>
-        <p>
-          <span>Zipcode: {{ brewery.postal_code }}</span>
-        </p>
-        <p>
-          <span>Country: {{ brewery.country }}</span>
-        </p>
-        <p>
-          <span>Phone: {{ brewery.phone }}</span>
-        </p>
-        <p>
-          <span>URL: {{ brewery.website_url }}</span>
-        </p>
-      </article>
-    </div>
+    <section class="breweries">
+      <img
+        src="https://ca-times.brightspotcdn.com/dims4/default/4b2dd8f/2147483647/strip/true/crop/1799x1012+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fdf%2F25%2Fe88c32e64daa892ea6b10909d958%2Fla-1510700492-zc9729950f-snap-image"
+        alt="Tray of barbequed pork with an amber ale"
+      />
+      <h2>Find Breweries by State</h2>
+
+      <form v-on:submit.prevent="findBreweries">
+        <div class="states">
+          <p>
+            <label for="state"
+              >Pick a State:
+              <select id="specificState" v-model="state">
+                <option>Colorado</option>
+                <option>Texas</option>
+                <option>Virginia</option>
+              </select>
+            </label>
+          </p>
+
+          <button @click="getData">Click the button for results</button>
+        </div>
+      </form>
+
+      <div class="home">
+        <article
+          v-for="brewery in breweries"
+          :key="brewery.state"
+          class="brewery"
+        >
+          <h2>Breweries in {{ state }}</h2>
+          <div class="state-breweries">
+            <p><span>Name:</span> {{ name }}</p>
+            <p><span>City:</span> {{ city }}</p>
+            <p><span>State:</span> {{ state }}</p>
+            <p><span>Zipcode:</span> {{ postal_code }}</p>
+            <p><span>Country:</span> {{ country }}</p>
+            <p><span>Phone:</span> {{ phone }}</p>
+            <p><span>URL:</span> {{ website_url }}</p>
+          </div>
+        </article>
+      </div>
+      <!-- end of home -->
+    </section>
+    <!--  end of breweries -->
   </main>
 </template>
 
@@ -58,20 +73,26 @@ export default {
           if (response.ok) {
             return response.json();
           } else {
-            throw new Error("Request failed with");
+            throw new Error(
+              "We don't have breweries in our datbase for that state"
+            );
           }
         })
         .then((json) => {
           console.log(json);
-          this.breweries = json;
-          json.forEach(function (el, index) {
-            console.log(el.name);
-            console.log(el.city);
-            console.log(el.state);
-            console.log(el.postal_code);
-            console.log(el.country);
-            console.log(el.phone);
-            console.log(el.website_url);
+          this.breweries = json;         
+          json.forEach((el, index) => {
+            console.log(this.state);
+            console.log(this.name);
+            if (el.state === this.state) {
+              this.name = el.name;
+              this.city = el.city;
+              this.state = el.state;
+              this.postal_code = el.postal_code;
+              this.country = el.country;
+              this.phone = el.phone;
+              this.website_url = el.website_url;
+            }
           });
         })
         .catch((err) => alert("ERROR", err));
@@ -82,3 +103,39 @@ export default {
 };
 // end of export default
 </script>
+
+<style lang = "scss">
+.breweries {
+  padding-top: 5rem;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-bottom: 1rem;
+  }
+
+  button {
+    margin: 2rem auto;
+    display: block;
+  }
+
+  .home {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+
+    article {
+      margin: auto;
+
+      .state-breweries {
+        span {
+          font-weight: bold;
+          color: $basecolor4;
+        }
+      }
+    }
+  }
+}
+</style>
