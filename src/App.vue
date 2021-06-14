@@ -71,7 +71,7 @@ body {
   .welcome {
     color: $basecolor4;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-size: 2.5rem;
   }
 
@@ -80,7 +80,7 @@ body {
     color: $basecolor;
     font-size: 2rem;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-size: 2rem;
   }
 
@@ -169,7 +169,7 @@ body {
           border: 1px ridge $basecolor;
           border-radius: 20px;
           font-weight: bold;
-          padding: 0.5rem 0.5rem;
+          // padding: 0.5rem 0.5rem;
           text-decoration: none;
         }
       }
@@ -193,199 +193,13 @@ body {
     width: 95%;
     background-color: $lightbasecolor3;
     margin: 1rem auto;
-    
     min-height: 50rem;
     padding-bottom: 5rem;
-
-    .intro {
-      font-size: 1em;
-      text-align: center;
-      color: basecolor2;
-      margin: 3% 5%;
-    }
-
-    // end of intro
-
-    .application {
-      button {
-        border: 1px ridge $basecolor;
-        font-size: 1rem;
-        color: $lightbase4;
-        background-color: $basecolor4;
-        padding: 0.5rem;
-        display: block;
-        margin: 1rem auto;
-        min-height: 2rem;
-      }
-
-      p {
-        font-size: 1.25rem;
-        color: $basecolor;
-        font-weight: bold;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      .random {
-        img {
-          border: 2px ridge $basecolor;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          width: 40%;
-          padding: 10px;
-        }
-      }
-
-      // end of random images
-
-      .family {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        // margin: 2rem;
-
-        .familyMember {
-          border: 2px ridge $basecolor;
-          margin: 1rem;
-          width: 30%;
-
-          img {
-            width: 100%;
-            padding: 10px;
-          }
-
-          h4 {
-            text-align: center;
-            padding: 1rem 0;
-          }
-
-          p {
-            font-size: 1rem;
-            font-weight: none;
-            padding: 0;
-          }
-        }
-
-        .date-of-death {
-          min-height: 1rem;
-        }
-
-        .member-children,
-        .children {
-          min-height: 2rem;
-          display: block;
-          margin: 0.5rem auto 1rem auto;
-
-          a {
-            text-decoration: none;
-            color: $lightbase4;
-          }
-
-          button,
-          .button {
-            padding: 0.5rem;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-            background-color: $basecolor;
-            color: $lightbasecolor3;
-            text-decoration: none;
-            max-height: 3rem;
-          }
-        }
-      }
-
-      // end of members
-    }
-
-    //end of app styling
   }
 
   //end of main content
 
-  .main-blog {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .events {
-      width: 20%;
-      margin-left: 5%;
-      padding-bottom: 3rem;
-
-      h3,
-      .hdr3 {
-        color: $basecolor;
-        font-weight: bold;
-        font-size: 1.25rem;
-        text-align: center;
-        padding: 3rem 1rem 1rem 1rem;
-      }
-
-      h4 {
-        color: $basecolor4;
-      }
-    }
-
-    .blog {
-      width: 75%;
-
-      h2,
-      .hdr2 {
-        color: $basecolor;
-        font-size: 2rem;
-        text-align: center;
-        padding: 1rem;
-      }
-
-      .blog-flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 2px dotted $darkgray;
-        margin-right: 5%;
-
-        .blog-img {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          width: 20%;
-          padding: 1rem 0rem;
-        }
-
-        .blog-txt {
-          width: 70%;
-          margin: 2% 0;
-          padding-left: 1rem;
-          padding-right: 1rem;
-
-          p {
-            padding-bottom: 1rem;
-          }
-
-          span {
-            color: $basecolor4;
-            font-weight: bold;
-          }
-        }
-
-        // end of blog-text
-      }
-
-      // end of blog flex container
-    }
-
-    // end of blog
-  }
-
-  // end of main content for blog page
-
+  // formatting for family tree pages
   .main-members {
     .members {
       display: flex;
@@ -452,6 +266,7 @@ body {
 
       h3 {
         padding: 0.5rem;
+        padding-top: 2rem;
       }
       // end of family1 and family2
 
@@ -468,11 +283,11 @@ body {
     button,
     .button {
       padding: 0.5rem;
-      // margin-top: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       background-color: $basecolor;
       color: $lightbasecolor3;
       text-decoration: none;
-      margin-bottom: 1rem;
     }
 
     .no-children {
@@ -480,7 +295,7 @@ body {
     }
 
     .leave-space {
-      min-height: 4rem;
+      min-height: 5rem;
     }
   }
 

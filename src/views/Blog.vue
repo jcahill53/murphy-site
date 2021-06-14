@@ -207,4 +207,95 @@ export default {
 
 
 <style lang="scss">
+  .main-blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .events {
+      width: 20%;
+      margin-left: 5%;
+      // padding-bottom: 1rem;
+
+      h3,
+      .hdr3 {
+        color: $basecolor;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem 1rem .5rem 1rem;
+      }
+
+      h4 {
+        color: $basecolor4;
+          // text-align: center;
+          padding-top: 1rem;
+          font-size: 1.25rem;
+      }
+
+      p{
+        padding: .25rem;
+        margin: 0rem;
+
+
+      }
+    }
+
+    .blog {
+      width: 75%;
+
+      h2,
+      .hdr2 {
+        color: $basecolor;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .blog-flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 2px dotted $darkgray;
+        margin-right: 5%;
+
+        .blog-img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 20%;
+          // padding: 1rem 0rem;
+        }
+
+        .blog-txt {
+          width: 70%;
+          margin: 2% 0;
+          padding-left: 1rem;
+          padding-right: 1rem;
+
+          p {
+            // padding-bottom: 1rem;
+          }
+
+          span {
+            color: $basecolor4;
+            font-weight: bold;
+          }
+        }
+
+        // end of blog-text
+      }
+
+      // end of blog flex container
+    }
+
+    // end of blog
+  }
+
+  // end of main content for blog page
+
 </style>

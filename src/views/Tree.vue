@@ -82,7 +82,7 @@
     </div>
     </div>
     <!-- end of members div -->
-    <router-view />
+    <!-- <router-view /> -->
   </main>
 
   <!-- <SiteFooter/> -->

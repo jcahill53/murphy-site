@@ -43,12 +43,13 @@
               <h4>{{ member.memberName }}</h4>
               <p><span>born: </span>{{ member.memberBirth }}</p>
               <div class="date-of-death">
-                <p v-if="member.memberDeath">
+               <p v-if="member.memberDeath">
                   <span>death: </span>{{ member.memberDeath }}
+                  
                 </p>
               </div>
               <!-- <a v-if="member.memberChildren" v-bind:href="member.memberFamily">Children</a> -->
-              <div class="member-children leave-space">
+              <div class="member-children" >
                 <button  v-if="member.memberChildren" >
                   <router-link  v-bind:to="memberTree(index)"
                     >Children</router-link
@@ -229,5 +230,108 @@ export default {
 </script>
 
 <style lang="scss">
+
+ .intro {
+      font-size: 1em;
+      text-align: center;
+      color: basecolor2;
+      margin: 3% 5%;
+    }
+
+   .application {
+      button {
+        border: 1px ridge $basecolor;
+        font-size: 1rem;
+        color: $lightbase4;
+        background-color: $basecolor4;
+        padding: 0.5rem;
+        display: block;
+        margin: 1rem auto;
+        min-height: 2rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: $basecolor;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .random {
+        img {
+          border: 2px ridge $basecolor;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 40%;
+          padding: 10px;
+        }
+      }
+
+      // end of random images
+
+      .family {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+     
+        .familyMember {
+          border: 2px ridge $basecolor;
+          margin: 1rem;
+          width: 30%;
+          padding-bottom: 1rem;
+
+          img {
+            width: 100%;
+            padding: 10px;
+          }
+
+          h4 {
+            text-align: center;
+            padding: .25rem 0;
+          }
+
+          p {
+            font-size: 1rem;
+            font-weight: none;
+            padding: 0;
+            max-height: 1rem;
+          }
+        }
+
+        .member-children,
+        .children {
+          display: block;
+          margin: 0 auto;
+          min-height: 3rem;
+
+          a {
+            text-decoration: none;
+            color: $lightbase4;
+          }
+
+          button,
+          .button {
+            padding: 0.5rem;
+            background-color: $basecolor;
+            color: $lightbasecolor3;
+            text-decoration: none;
+            max-height: 3rem;
+          }
+        .leave-space {
+          min-height: 5rem;
+        }
+        }
+      }
+
+      // end of members
+    }
+
+    //end of app styling
+
+    // end of intro
 </style>
 

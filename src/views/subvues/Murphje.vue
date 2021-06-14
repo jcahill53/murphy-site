@@ -106,5 +106,4 @@
     <!-- end of members div -->
   </main>
 
-  <!-- <SiteFooter/> -->
 </template>

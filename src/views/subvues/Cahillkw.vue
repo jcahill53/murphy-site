@@ -41,9 +41,6 @@
     <!-- end of members div -->
   </main>
 
-  <footer class="footer">
-    <p class="copyright">Copyright &copy; 2021</p>
-  </footer>
 </template>
  
 

@@ -9,16 +9,17 @@
 
       <form v-on:submit.prevent="findBreweries">
         <div class="states">
-          <p>
-            <label for="state"
-              >Pick a State:
-              <select id="specificState" v-model="state">
+          <div class="pick-state">
+            <label for="specificState"
+              >Pick a State from the list:
+               <select id="specificState" v-model="state" >
+                <option disabled value ="Please select one" selected>Please select one</option>
                 <option>Colorado</option>
                 <option>Texas</option>
                 <option>Virginia</option>
               </select>
             </label>
-          </p>
+          </div>
 
           <button @click="getData">Click the button for results</button>
         </div>
@@ -30,7 +31,7 @@
           :key="brewery.state"
           class="brewery"
         >
-          <h2>Breweries in {{ state }}</h2>
+          <h2>Breweries in {{ this.state }}</h2>
           <div class="state-breweries">
             <p><span>Name:</span> {{ name }}</p>
             <p><span>City:</span> {{ city }}</p>
@@ -80,11 +81,11 @@ export default {
         })
         .then((json) => {
           console.log(json);
-          this.breweries = json;         
+          this.breweries = json;
           json.forEach((el, index) => {
             console.log(this.state);
             console.log(this.name);
-            if (el.state === this.state) {
+            if (this.state == el.state) {
               this.name = el.name;
               this.city = el.city;
               this.state = el.state;
@@ -115,20 +116,26 @@ export default {
     width: 50%;
     padding-bottom: 1rem;
   }
-
-  button {
-    margin: 2rem auto;
-    display: block;
+  .pick-state {
+    margin: auto;
+    width: 15%;
   }
-
+  button {
+    padding: 0.5rem;
+    display: block;
+    margin: 1rem auto;
+    width: 20%;
+    background-color: $basecolor4;
+    color: $lightbasecolor;
+    font-weight: bold;
+    text-decoration: none;
+  }
   .home {
     margin: auto;
     width: 30%;
     padding: 10px;
-
     article {
       margin: auto;
-
       .state-breweries {
         span {
           font-weight: bold;
