@@ -63,7 +63,7 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body row ">
-              <img class="tartan col" src="@/assets/Murphy-Tartan-sm.jpg"
+              <img class="tartan col" src="@/assets/murphy-tartan-sm.jpg"
                 alt="Murphy Tartan Plaid Primarily green with red, black, yellow and white pattern">
               <p class="col">This tartan is a colour modification of MacLean of Duart. Believed for many years to have
                 been recorded
