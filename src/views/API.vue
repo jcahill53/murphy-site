@@ -7,31 +7,39 @@
       />
       <h2>Find Breweries by State</h2>
 
-      <form v-on:submit.prevent="findBreweries">
+      <form v-on:click.prevent="findBreweries">
         <div class="states">
           <div class="pick-state">
             <label for="specificState"
               >Pick a State from the list:
-               <select id="specificState" v-model="state" >
-                <option disabled value ="Please select one" selected>Please select one</option>
+              <select id="specificState" v-model="state">
+                <option disabled value="Please select one" selected>
+                  Please select one
+                </option>
+                <option>California</option>
                 <option>Colorado</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Louisiana</option>
+                <option>Maryland</option>
+                <option>Michigan</option>
+                <option>New Hampshire</option>
+                <option>Ohio</option>
+                <option>Pennsylvannia</option>
                 <option>Texas</option>
                 <option>Virginia</option>
+                <option>Washington</option>
               </select>
             </label>
           </div>
 
-          <button @click="getData">Click the button for results</button>
+          <!-- <button @click="findBreweries">Click the button for results</button> -->
         </div>
       </form>
 
       <div class="home">
-        <article
-          v-for="brewery in breweries"
-          :key="brewery.state"
-          class="brewery"
-        >
-          <h2>Breweries in {{ this.state }}</h2>
+        <article class="brewery">
+          <h3>Selected brewery in: {{ this.state }}</h3>
           <div class="state-breweries">
             <p><span>Name:</span> {{ name }}</p>
             <p><span>City:</span> {{ city }}</p>
@@ -53,7 +61,7 @@
 
 <script>
 export default {
-  name: "List",
+  name: "findBreweries",
   data() {
     return {
       breweries: [],
@@ -67,7 +75,7 @@ export default {
     };
   },
   methods: {
-    getData() {
+    findBreweries() {
       fetch("https://api.openbrewerydb.org/breweries")
         .then((response) => {
           console.log(response);
@@ -82,7 +90,7 @@ export default {
         .then((json) => {
           console.log(json);
           this.breweries = json;
-          json.forEach((el, index) => {
+          json.filter((el, index) => {
             console.log(this.state);
             console.log(this.name);
             if (this.state == el.state) {
