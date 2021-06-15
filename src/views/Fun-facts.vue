@@ -67,7 +67,7 @@
               <div class="row">
                 <img
                   class="leinster col mw-50"
-                  src="@/assets/irish-map-sm.jpg"
+                  src="/assets/irish-map-sm.jpg"
                   alt="Map of Ireland showing Leinster in the southeastern corner of the country"
                 />
                 <p class="col">
@@ -78,7 +78,7 @@
                 </p>
                 <img
                   class="wexford col mw-50"
-                  src="@/assets/wexford-map-sm.jpg"
+                  src="/assets/wexford-map-sm.jpg"
                   alt="Map of Ireland showing Wexford County along the southeastern shorline of Ireland"
                 />
               </div>
@@ -111,7 +111,7 @@
             <div class="accordion-body row">
               <img
                 class="tartan col mw-25"
-                src="@/assets/murphy-tartan-sm.jpg"
+                src="/assets/murphy-tartan-sm.jpg"
                 alt="Murphy Tartan Plaid Primarily green with red, black, yellow and white pattern"
               />
               <p class="col">

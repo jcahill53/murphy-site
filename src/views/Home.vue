@@ -75,23 +75,23 @@ export default {
     return {
       imageSrcRandom: [
         {
-          src: require("@/assets/image1.jpg"),
+          src: "/assets/image1.jpg",
           descr: "Rich Murphy with his daughter Kate",
         },
         {
-          src: require("@/assets/image2.jpg"),
+          src: "/assets/image2.jpg",
           descr: "Betsy shopping for plants at the garden center",
         },
         {
-          src: require("@/assets/image3.jpg"),
+          src: "/assets/image3.jpg",
           descr: "Betsy Murphy at restaurant",
         },
         {
-          src: require("@/assets/image4.jpg"),
+          src: "/assets/image4.jpg",
           descr: "Rosemary Murphy at dinner",
         },
         {
-          src: require("@/assets/image5.jpg"),
+          src: "/assets/image5.jpg",
           descr: "The Cahill family",
         },
       ],
@@ -104,7 +104,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "01/01/1900",
           memberChildren: true,
-          memberImage: require("@/assets/image2.jpg"),
+          memberImage: "/assets/image2.jpg",
           memberFamily: "/tree",
         },
         {
@@ -115,7 +115,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "01/01/1900",
           memberChildren: true,
-          memberImage: require("@/assets/image1.jpg"),
+          memberImage: "/assets/image1.jpg",
           memberFamily: "/tree",
         },
 
@@ -127,7 +127,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: false,
-          memberImage: require("@/assets/image2.jpg"),
+          memberImage: "/assets/image2.jpg",
           memberFamily: "/tree",
         },
         {
@@ -138,7 +138,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: require("@/assets/image1.jpg"),
+          memberImage: "/assets/image1.jpg",
           memberFamily: "/murphje",
         },
         {
@@ -149,7 +149,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: false,
-          memberImage: require("@/assets/image4.jpg"),
+          memberImage: "/assets/image4.jpg",
           memberFamily: "/tree",
         },
         {
@@ -160,7 +160,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: require("@/assets/image4.jpg"),
+          memberImage: "assets/image4.jpg",
           memberFamily: "/murphrj",
         },
         {
@@ -171,7 +171,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: require("@/assets/image4.jpg"),
+          memberImage: "/assets/image4.jpg",
           memberFamily: "/cahilljm",
         },
         {
@@ -182,7 +182,7 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: true,
-          memberImage: require("@/assets/image1.jpg"),
+          memberImage: "/assets/image1.jpg",
           memberFamily: "/murphhc",
         },
         {
@@ -193,11 +193,11 @@ export default {
           memberBirth: "01/01/1900",
           memberDeath: "",
           memberChildren: false,
-          memberImage: require("@/assets/image1.jpg"),
+          memberImage: "/assets/image1.jpg",
           memberFamily: "/tree",
         },
       ],
-      chosenImage: require("@/assets/image3.jpg"),
+      chosenImage: ("/assets/image3.jpg"),
       chosenDescr: "Click the button to see a new image!",
       memberName: "",
       memberFather: "",
