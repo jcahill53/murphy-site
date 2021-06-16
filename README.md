@@ -7,8 +7,11 @@ DESCRIPTION OF PROJECT
 This site contains a series of pages to help connect members of the Murphy family by providing information about the family and ways to connect:
 
 1.	 Home – the page contains a summary about the family and allows users to view pictures and information about each family member
+--
 2.	Tree – the page provides family trees for the family.  If a member has children a family tree subpage can be accessed
+--
 3.	Blog – the page contains articles that relate to the Murphy family.  In addition the page includes dates and times for events that are of interest to family members.
+--
 4.  Fun-facts - the page include fun facts about the family and allows users to send their own fun facts to the site administrator for review and addition to the page.  A breweries API can be accessed from the page to find breweries by state.
 
 -----------------------------------------------------
