@@ -25,7 +25,6 @@
                 <option>Michigan</option>
                 <option>New Hampshire</option>
                 <option>Ohio</option>
-                <option>Pennsylvannia</option>
                 <option>Texas</option>
                 <option>Virginia</option>
               </select>
@@ -125,13 +124,13 @@ export default {
   }
   .pick-state {
     margin: auto;
-    width: 15%;
+    width: 20%;
   }
   button {
     padding: 0.5rem;
     display: block;
     margin: 1rem auto;
-    width: 20%;
+    width: 50%;
     background-color: $basecolor4;
     color: $lightbasecolor;
     font-weight: bold;
@@ -139,7 +138,7 @@ export default {
   }
   .home {
     margin: auto;
-    width: 30%;
+    width: 50%;
     padding: 10px;
     article {
       margin: auto;
@@ -151,5 +150,15 @@ export default {
       }
     }
   }
+}
+@media screen and (max-width: 576px) {
+.breweries {
+  .pick-state {
+    width: 50%;
+  }
+ .home {
+    width: 75%;
+ }
+}
 }
 </style>

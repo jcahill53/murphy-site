@@ -237,7 +237,7 @@
 
             <div class="email">
               <label
-                class="form-label fw-bold text-warning bg-secondary w-100 p-2"
+                class="form-label fw-bold text-warning bg-secondary w-100 p-2 mt-2"
                 for="email"
                 >Please provide your Email address</label
               >
@@ -254,7 +254,7 @@
 
           <!-- Checkbox selection -->
           <div class="category">
-            <p class="text-warning bg-secondary fw-bold w-100 p-2">
+            <p class="text-warning bg-secondary fw-bold w-100 p-2 mt-2">
               Which categories fit your fun fact?
             </p>
             <!-- checkbox1 -->
@@ -265,7 +265,7 @@
                 value="fact-type"
                 id="flexCheck1"
               />
-              <label class="form-check-label text-dark" for="flexCheck1">
+              <label class="form-check-label text-dark " for="flexCheck1">
                 A fun fact about our family
               </label>
             </div>
@@ -278,7 +278,7 @@
                 value="fact-type"
                 id="flexCheck2"
               />
-              <label class="form-check-label text-dark" for="flexCheck2">
+              <label class="form-check-label text-dark " for="flexCheck2">
                 A fun fact about the Murphy Clan in general
               </label>
             </div>
@@ -291,7 +291,7 @@
                 value="fact-type"
                 id="flexCheck3"
               />
-              <label class="form-check-label text-dark" for="flexCheck3">
+              <label class="form-check-label text-dark " for="flexCheck3">
                 A fun fact about where we come from in Ireland
               </label>
             </div>
@@ -303,7 +303,7 @@
           <div class="form-text">
             <label
               for="textArea1"
-              class="form-label bg-secondary fw-bold text-warning w-100 p-2"
+              class="form-label bg-secondary fw-bold text-warning w-100 p-2 mt-2"
               >Tell us your fun fact about Murphys</label
             >
             <textarea class="form-control" id="textArea1" rows="3"></textarea>

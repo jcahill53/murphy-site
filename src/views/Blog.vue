@@ -1,5 +1,7 @@
 <template>
+ 
   <main class="main-blog">
+     
     <aside class="events">
       <h3>Upcoming Events</h3>
       <div class="event-container">
@@ -8,21 +10,21 @@
           :key="event.description"
           class="familyMember"
         >
-          <h4>{{event.description}}</h4>
-          <p><span>Date: </span>{{event.startdate}}</p>
-          <p><span>Start: </span>{{event.start}} {{event.starttimeZone}}</p>
-          <p><span>End: </span>{{event.end}} {{event.endtimeZone}}</p>
+          <h4>{{ event.description }}</h4>
+          <p><span>Date: </span>{{ event.startdate }}</p>
+          <p><span>Start: </span>{{ event.start }} {{ event.starttimeZone }}</p>
+          <p><span>End: </span>{{ event.end }} {{ event.endtimeZone }}</p>
         </article>
       </div>
     </aside>
 
     <section class="blog">
-      <h2 class="blog-hdr">Murphy Family Blog</h2>
+    <h2 class="blog-hdr">Murphy Family Blog</h2>
       <section class="blog-section">
         <article class="blog-flex-container">
           <img
             class="blog-img"
-            src= "/assets/murphy-coat-of-arms2.jpg"
+            src="/assets/murphy-coat-of-arms2.jpg"
             alt="Murphy Coat of Arms"
           />
           <section class="blog-txt">
@@ -128,77 +130,76 @@
 export default {
   name: "event app",
   data() {
-    return { 
-     events:[{
-        "description": "John's Birthday",
-        "enddate": "5/15/21",
-        "end": "11:59pm",
-        "endtimeZone": "EST",
-        "startdate": "5/15/21",
-        "start": "12:00am",
-        "starttimeZone": "EST",
-        }, 
+    return {
+      events: [
         {
-        "description": "Tim's Birthday",
-        "end.date": "5/23/21",
-        "end": "11:59pm",
-        "endtimeZone": "EST",
-        "startdate": "6/20/21",
-        "start": "12:00am",
-        "starttimeZone": "EST",
+          description: "John's Birthday",
+          enddate: "5/15/21",
+          end: "11:59pm",
+          endtimeZone: "EST",
+          startdate: "5/15/21",
+          start: "12:00am",
+          starttimeZone: "EST",
         },
         {
-        "description": "Betsy's Birthday",
-        "enddate": "6/23/21",
-        "end": "11:59pm",
-        "endtimeZone": "EST",
-        "startdate": "6/25/21",
-        "start": "12:00am",
-        "starttimeZone": "EST",
-        }, 
-        {
-        "description": "Family Reunion",
-        "enddate": "7/05/21",
-        "end": "9:00pm",
-        "endtimeZone": "EST",
-        "startdate": "7/05/21",
-        "start": "2:00pm",
-        "starttimeZone": "EST",
+          description: "Tim's Birthday",
+          "end.date": "5/23/21",
+          end: "11:59pm",
+          endtimeZone: "EST",
+          startdate: "6/20/21",
+          start: "12:00am",
+          starttimeZone: "EST",
         },
         {
-        "description": "Owen's Birthday",
-        "enddate": "7/20/21",
-        "end": "11:59pm",
-        "endtimeZone": "EST",
-        "startdate": "7/20/21",
-        "start": "12:00am",
-        "starttimeZone": "EST",
-        }, 
+          description: "Betsy's Birthday",
+          enddate: "6/23/21",
+          end: "11:59pm",
+          endtimeZone: "EST",
+          startdate: "6/25/21",
+          start: "12:00am",
+          starttimeZone: "EST",
+        },
         {
-        "description": "Mom and Dad's Anniversay",
-        "enddate": "7/24/21",
-        "end": "11:59pm",
-        "endtimeZone": "EST",
-        "startdate": "7/24/21",
-        "start": "12:00am",
-        "starttimeZone": "EST",
-        }, 
+          description: "Family Reunion",
+          enddate: "7/05/21",
+          end: "9:00pm",
+          endtimeZone: "EST",
+          startdate: "7/05/21",
+          start: "2:00pm",
+          starttimeZone: "EST",
+        },
+        {
+          description: "Owen's Birthday",
+          enddate: "7/20/21",
+          end: "11:59pm",
+          endtimeZone: "EST",
+          startdate: "7/20/21",
+          start: "12:00am",
+          starttimeZone: "EST",
+        },
+        {
+          description: "Mom and Dad's Anniversay",
+          enddate: "7/24/21",
+          end: "11:59pm",
+          endtimeZone: "EST",
+          startdate: "7/24/21",
+          start: "12:00am",
+          starttimeZone: "EST",
+        },
       ],
-        description: " ",
-        enddate: " ",
-        end: " ",
-        endtimeZone: " ",
-        startdate: " ",
-        start: " ",
-        starttimeZone: " ",
+      description: " ",
+      enddate: " ",
+      end: " ",
+      endtimeZone: " ",
+      startdate: " ",
+      start: " ",
+      starttimeZone: " ",
     };
     // end of return
   },
   // end of data() section
 
-  methods: {
-  
-  },
+  methods: {},
   // end of methods
 };
 // end of export default
@@ -207,95 +208,125 @@ export default {
 
 
 <style lang="scss">
+.main-blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .events {
+    width: 20%;
+    margin-left: 3%;
+    margin-right: 2%;
+    // padding-bottom: 1rem;
+
+    h3,
+    .hdr3 {
+      color: $basecolor;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    h4 {
+      color: $basecolor4;
+      text-align: center;
+      padding-top: 1rem;
+      font-size: 1.25rem;
+    }
+
+    p {
+      padding: 0.25rem;
+      margin: 0rem;
+    }
+  }
+
+  .blog {
+    width: 75%;
+
+    h2,
+    .hdr2 {
+      color: $basecolor;
+      font-size: 2rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .blog-flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      border: 2px dotted $darkgray;
+      margin-right: 3%;
+
+      .blog-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        // padding: 1rem 0rem;
+      }
+
+      .blog-txt {
+        width: 70%;
+        margin: 2% 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        p {
+          // padding-bottom: 1rem;
+        }
+
+        span {
+          color: $basecolor4;
+          font-weight: bold;
+        }
+      }
+
+      // end of blog-text
+    }
+
+    // end of blog flex container
+  }
+
+  // end of blog
+}
+
+@media screen and (max-width: 576px) {
   .main-blog {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column-reverse;
 
     .events {
-      width: 20%;
-      margin-left: 5%;
-      // padding-bottom: 1rem;
-
-      h3,
-      .hdr3 {
-        color: $basecolor;
-        font-weight: bold;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 1rem 1rem .5rem 1rem;
-      }
-
-      h4 {
-        color: $basecolor4;
-          // text-align: center;
-          padding-top: 1rem;
-          font-size: 1.25rem;
-      }
-
-      p{
-        padding: .25rem;
-        margin: 0rem;
-
-
-      }
+      width: 50%;
+      margin: 0 auto;
+      // max-height: 5rem;
     }
 
     .blog {
-      width: 75%;
-
-      h2,
-      .hdr2 {
-        color: $basecolor;
-        font-size: 2rem;
-        text-align: center;
-        padding: 1rem;
-      }
+      width: 95%;
+      margin: 0 auto;
 
       .blog-flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 2px dotted $darkgray;
-        margin-right: 5%;
-
-        .blog-img {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          width: 20%;
-          // padding: 1rem 0rem;
-        }
-
-        .blog-txt {
-          width: 70%;
-          margin: 2% 0;
-          padding-left: 1rem;
-          padding-right: 1rem;
-
-          p {
-            // padding-bottom: 1rem;
-          }
-
-          span {
-            color: $basecolor4;
-            font-weight: bold;
-          }
-        }
-
-        // end of blog-text
+        flex-direction: column;
+     
+      .blog-img {
+        width: 80%;
+        margin-top: 1rem;
       }
 
-      // end of blog flex container
+      .blog-txt {
+        width: 80%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+       }
     }
-
-    // end of blog
   }
+}
 
-  // end of main content for blog page
-
+// end of main content for blog page
 </style>

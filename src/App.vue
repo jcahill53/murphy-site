@@ -24,10 +24,8 @@
       <!-- <li class="list">
         <router-link class="list-item" to="/api">API sample</router-link>
       </li> -->
- 
     </ul>
   </nav>
-
 
   <router-view />
 
@@ -192,18 +190,17 @@ body {
     min-height: 50rem;
     padding-bottom: 5rem;
   }
-
-  //end of main content
+  // end of main
 
   // formatting for family tree pages
   .main-members {
     .members {
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      width: 95%;
+      // width: 90%;
       font-size: 1rem;
     }
 
@@ -218,8 +215,9 @@ body {
         flex-wrap: wrap;
         border: 3px solid $darkgray;
         padding: 1rem 1rem;
-        margin: 2rem 5rem 0rem 5rem;
+        margin: 1rem 2rem 0rem 2rem;
         background-color: lightgray;
+        // width: 60%;
       }
 
       .connector {
@@ -243,9 +241,10 @@ body {
 
       article {
         border: 3px solid $basecolor4;
+        background-color: $lightbasecolor3;
         border-radius: 20px;
-        min-height: 10rem;
-        min-width: 20rem;
+        width: 30%;
+        min-height: 15rem;
         text-align: center;
         margin: 1rem;
         display: flex;
@@ -253,9 +252,14 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        background-color: $lightbasecolor3;
       }
 
+      @media screen and (max-width: 575px) {
+        article {
+          width: 90%;
+        }
+      }
+      
       p {
         padding-bottom: 0rem 0.25rem;
       }
