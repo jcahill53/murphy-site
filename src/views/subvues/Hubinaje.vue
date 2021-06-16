@@ -21,11 +21,13 @@
           <article>
             <h3>Claire Hubina</h3>
             <p><span>born:</span>01/01/1900</p>
-          <div class="leave-space">
-            <button class = "no-children">
-              <router-link class="button no-children" to="/tree">Children</router-link>
-            </button>
-          </div>
+            <div class="leave-space">
+              <button class="no-children">
+                <router-link class="button no-children" to="/tree"
+                  >Children</router-link
+                >
+              </button>
+            </div>
           </article>
           <article>
             <h3>Paul Hubina</h3>
@@ -47,5 +49,4 @@
     </div>
     <!-- end of members div -->
   </main>
-
 </template>

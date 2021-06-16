@@ -66,7 +66,7 @@ body {
     color: $basecolor4;
     text-align: center;
     padding-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   h2,
@@ -111,6 +111,25 @@ body {
     }
   }
 
+  @media screen and (max-width: 577px) {
+    .header {
+      justify-content: center;
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .logo {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .site-title {
+        width: 90%;
+        text-align: center;
+      }
+    }
+  }
+
   // end of header
 
   //   nav bar
@@ -145,16 +164,6 @@ body {
           border-radius: 20px;
         }
 
-        // When button is clicked change formatting of menu item to highlight
-
-        // .list-item:active {
-        //   background-color: $lightbase4;
-        //   color: $lightbasecolor;
-        //   border: 1px ridge $basecolor;
-        //   border-radius: 20px;
-        //   text-decoration: none;
-        // }
-
         // Set format of menu item for page user is currently on.  Uses js file activePage.js to add class of "active" if page is active
         .router-link-active {
           font-size: 0.9rem;
@@ -163,7 +172,6 @@ body {
           border: 1px ridge $basecolor;
           border-radius: 20px;
           font-weight: bold;
-          // padding: 0.5rem 0.5rem;
           text-decoration: none;
         }
       }
@@ -200,14 +208,12 @@ body {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      // width: 90%;
       font-size: 1rem;
     }
 
     .family1,
     .family2 {
       .parent {
-        // margin: 5rem;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -217,7 +223,6 @@ body {
         padding: 1rem 1rem;
         margin: 1rem 2rem 0rem 2rem;
         background-color: lightgray;
-        // width: 60%;
       }
 
       .connector {
@@ -259,7 +264,7 @@ body {
           width: 90%;
         }
       }
-      
+
       p {
         padding-bottom: 0rem 0.25rem;
       }

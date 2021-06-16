@@ -40,7 +40,6 @@
     </div>
     <!-- end of members div -->
   </main>
-
 </template>
  
 

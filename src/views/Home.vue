@@ -47,7 +47,6 @@
                   <span>death: </span>{{ member.memberDeath }}
                 </p>
               </div>
-              <!-- <a v-if="member.memberChildren" v-bind:href="member.memberFamily">Children</a> -->
               <div class="member-children">
                 <button v-if="member.memberChildren">
                   <router-link v-bind:to="memberTree(index)"
@@ -219,7 +218,6 @@ export default {
       this.chosenDescr = this.imageSrcRandom[chosenNumber].descr;
     },
     memberTree(index) {
-      // console.log(index);
       return this.members[index].memberFamily;
     },
   },

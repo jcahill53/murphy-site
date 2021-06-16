@@ -185,14 +185,25 @@
                 alt="Tray of barbequed pork with an amber ale"
               />
               <div class="col">
-                <p class = "row">
+                <p class="row">
                   Favorite times for the Murphy family include family barbeques
                   where good food, wine and beer can be enjoyed in each others
                   company. Click below to find a good brewery!
                 </p>
                 <button
                   id="fact-button"
-                  class="fact-button px-2 py-1 d-block mt-2 mx-auto text-center bg-secondary text-light row"
+                  class="
+                    fact-button
+                    px-2
+                    py-1
+                    d-block
+                    mt-2
+                    mx-auto
+                    text-center
+                    bg-secondary
+                    text-light
+                    row
+                  "
                   type="submit"
                   value="Submit"
                   name="submit"
@@ -200,8 +211,7 @@
                   <router-link
                     class="
                       list-item
-                      text-center text-decoration-none
-                      text-light
+                      text-center text-decoration-none text-light
                     "
                     to="/api"
                     >Find a good brewery</router-link
@@ -237,7 +247,15 @@
 
             <div class="email">
               <label
-                class="form-label fw-bold text-warning bg-secondary w-100 p-2 mt-2"
+                class="
+                  form-label
+                  fw-bold
+                  text-warning
+                  bg-secondary
+                  w-100
+                  p-2
+                  mt-2
+                "
                 for="email"
                 >Please provide your Email address</label
               >
@@ -265,7 +283,7 @@
                 value="fact-type"
                 id="flexCheck1"
               />
-              <label class="form-check-label text-dark " for="flexCheck1">
+              <label class="form-check-label text-dark" for="flexCheck1">
                 A fun fact about our family
               </label>
             </div>
@@ -278,7 +296,7 @@
                 value="fact-type"
                 id="flexCheck2"
               />
-              <label class="form-check-label text-dark " for="flexCheck2">
+              <label class="form-check-label text-dark" for="flexCheck2">
                 A fun fact about the Murphy Clan in general
               </label>
             </div>
@@ -291,7 +309,7 @@
                 value="fact-type"
                 id="flexCheck3"
               />
-              <label class="form-check-label text-dark " for="flexCheck3">
+              <label class="form-check-label text-dark" for="flexCheck3">
                 A fun fact about where we come from in Ireland
               </label>
             </div>
@@ -303,7 +321,15 @@
           <div class="form-text">
             <label
               for="textArea1"
-              class="form-label bg-secondary fw-bold text-warning w-100 p-2 mt-2"
+              class="
+                form-label
+                bg-secondary
+                fw-bold
+                text-warning
+                w-100
+                p-2
+                mt-2
+              "
               >Tell us your fun fact about Murphys</label
             >
             <textarea class="form-control" id="textArea1" rows="3"></textarea>
@@ -312,7 +338,17 @@
 
           <button
             id="fact-button"
-            class="fact-button px-2 py-1 d-block mt-2 mx-auto text-center bg-secondary text-light"
+            class="
+              fact-button
+              px-2
+              py-1
+              d-block
+              mt-2
+              mx-auto
+              text-center
+              bg-secondary
+              text-light
+            "
             type="submit"
             value="Submit"
             name="submit"
@@ -331,5 +367,4 @@
 </script>
 
 <style lang="scss">
-
 </style>

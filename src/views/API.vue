@@ -31,7 +31,6 @@
             </label>
           </div>
 
-          <!-- <button @click="findBreweries">Click the button for results</button> -->
         </div>
       </form>
 
@@ -54,8 +53,6 @@
     <!--  end of breweries -->
   </main>
 </template>
-
-
 
 <script>
 export default {

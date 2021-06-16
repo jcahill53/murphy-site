@@ -1,7 +1,5 @@
 <template>
- 
   <main class="main-blog">
-     
     <aside class="events">
       <h3>Upcoming Events</h3>
       <div class="event-container">
@@ -19,7 +17,7 @@
     </aside>
 
     <section class="blog">
-    <h2 class="blog-hdr">Murphy Family Blog</h2>
+      <h2 class="blog-hdr">Murphy Family Blog</h2>
       <section class="blog-section">
         <article class="blog-flex-container">
           <img
@@ -219,7 +217,6 @@ export default {
     width: 20%;
     margin-left: 3%;
     margin-right: 2%;
-    // padding-bottom: 1rem;
 
     h3,
     .hdr3 {
@@ -268,7 +265,6 @@ export default {
         margin-left: auto;
         margin-right: auto;
         width: 20%;
-        // padding: 1rem 0rem;
       }
 
       .blog-txt {
@@ -276,10 +272,6 @@ export default {
         margin: 2% 0;
         padding-left: 1rem;
         padding-right: 1rem;
-
-        p {
-          // padding-bottom: 1rem;
-        }
 
         span {
           color: $basecolor4;
@@ -303,7 +295,6 @@ export default {
     .events {
       width: 50%;
       margin: 0 auto;
-      // max-height: 5rem;
     }
 
     .blog {
@@ -312,18 +303,18 @@ export default {
 
       .blog-flex-container {
         flex-direction: column;
-     
-      .blog-img {
-        width: 80%;
-        margin-top: 1rem;
-      }
 
-      .blog-txt {
-        width: 80%;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        .blog-img {
+          width: 80%;
+          margin-top: 1rem;
+        }
+
+        .blog-txt {
+          width: 80%;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
       }
-       }
     }
   }
 }
