@@ -54,7 +54,6 @@ The SEO score was obtained after taking several steps:
   <meta property="og:type" content="website"  />
   <meta property="og:url" content="" />
   <meta property="og:image" content="https://media.istockphoto.com/photos/three-generation-hispanic-family-standing-in-the-park-smiling-to-picture-id1094440264?s=612x612" />
-phy Family">
 2.  The site was written using semantic HTML to make it easier for search engines to understand page content
 3.  Descriptive text was added to all links. 
 4.  Image elements were assigned alt attributes to describe the images
